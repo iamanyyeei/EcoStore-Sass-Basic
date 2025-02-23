@@ -2,15 +2,45 @@ body {
   margin: 0;
   padding: 0;
   background-color: #FFEFE7;
+  font-family: "IBM Plex Sans", serif;
 }
 
-.navbar {
-  width: 100%;
+nav {
+  width: auto;
   height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-main {
-  width: 100%;
-  height: 100%;
-  background-color: #7C6A0A;
+nav p {
+  font-size: 1.5rem;
+  padding-left: 45px;
+  font-weight: 500;
+  color: #7C6A0A;
+}
+nav .icons {
+  display: flex;
+  gap: 10px;
+  padding-right: 45px;
+}
+nav .icons button {
+  background: none;
+  border-style: none;
+}
+nav .icons__main {
+  display: none;
+}
+@media (max-width: 600px) {
+  nav p {
+    padding-left: 25px;
+  }
+  nav .icons {
+    padding-right: 25px;
+  }
+  nav .icons__profile, nav .icons__wishlist, nav .icons__cart {
+    display: none;
+  }
+  nav .icons__main {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */
