@@ -136,12 +136,13 @@ article{
 section{
     width: auto;
     height: auto;
-    padding: 60px 55px;
+    padding: 60px 55px 0;
 
     h2{
         color: $primary-text-color;
         font-size: 1.8rem;
         font-weight: 400;
+        padding-bottom: 20px;
     }
 
     .healtcare{
@@ -155,7 +156,7 @@ section{
             column-gap: 85px;
             row-gap: 40px;
 
-            margin: 40px 0 60px 0;
+            margin: 40px 0 80px 0;
 
             .product{
                 width: auto;
@@ -169,6 +170,15 @@ section{
                 flex-direction: column;
 
                 color: $primary-text-color;
+
+                .heart-icon{
+                    width: auto;
+                    height: auto;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding-right: 8px;
+                    padding-bottom: 8px;
+                }
 
                 img{
                     width: 100%;
@@ -184,6 +194,16 @@ section{
                     font-size: $paragraph;
                     text-align: justify;
                 }
+            }
+        }
+    }
+
+    .furniture{
+        @extend .healtcare;
+        .card-section{
+            .product{
+                background-color: $tertiary-color;
+                color: aliceblue;
             }
         }
     }
