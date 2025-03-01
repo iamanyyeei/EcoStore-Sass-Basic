@@ -7,6 +7,13 @@ $extra-color: #FA9500;
 $font-stack: "IBM Plex Sans", serif;
 $paragraph: 1.3rem;
 
+@mixin flexCenter ($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -18,9 +25,7 @@ body{
 nav{
     width: 100vw;
     height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexCenter(row, space-between, center);
 
     p{
         font-size: $paragraph;
@@ -125,7 +130,7 @@ article{
         .impact-section{
             grid-row: 2;
             margin-top: 20px;
-            justify-items: center;
+            @include flexCenter(column, space-between, center);
         }
         button{
             margin-top: 25px;
@@ -166,16 +171,14 @@ section{
                 background-color: $secondary-color;
                 border-radius: 12px;
 
-                display: flex;
-                flex-direction: column;
+                @include flexCenter(column);
 
                 color: $primary-text-color;
 
                 .heart-icon{
                     width: auto;
                     height: auto;
-                    display: flex;
-                    justify-content: flex-end;
+                    @include flexCenter(row, flex-end);
                     padding-right: 8px;
                     padding-bottom: 8px;
                 }

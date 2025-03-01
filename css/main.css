@@ -10,6 +10,7 @@ nav {
   width: 100vw;
   height: 100px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -148,7 +149,9 @@ section .healtcare .card-section .product .heart-icon, section .furniture .card-
   width: auto;
   height: auto;
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
+  align-items: justify;
   padding-right: 8px;
   padding-bottom: 8px;
 }
