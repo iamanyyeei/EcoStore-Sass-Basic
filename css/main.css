@@ -15,7 +15,7 @@ nav {
   align-items: center;
 }
 nav p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding-left: 80px;
   font-weight: 500;
   color: #7C6A0A;
@@ -60,7 +60,7 @@ article h1 {
   font-size: 2rem;
 }
 article p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: justify;
 }
 article button {
@@ -118,7 +118,12 @@ article .image-section img {
 section {
   width: auto;
   height: auto;
-  padding: 60px 55px 0;
+  padding: 60px 80px 0;
+}
+@media (max-width: 720px) {
+  section {
+    padding: 60px 35px 0;
+  }
 }
 section h2 {
   color: #7C6A0A;
@@ -134,28 +139,50 @@ section .healtcare .card-section, section .furniture .card-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
+  justify-items: center;
   -moz-column-gap: 85px;
        column-gap: 85px;
-  row-gap: 40px;
+  row-gap: 50px;
   margin: 40px 0 80px 0;
 }
+@media (max-width: 950px) {
+  section .healtcare .card-section, section .furniture .card-section {
+    -moz-column-gap: 45px;
+         column-gap: 45px;
+    row-gap: 50px;
+  }
+}
+@media (max-width: 800px) {
+  section .healtcare .card-section, section .furniture .card-section {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+  }
+}
 section .healtcare .card-section .product, section .furniture .card-section .product {
-  width: auto;
+  width: 80%;
   height: auto;
-  padding: 20px 20px;
+  display: grid;
+  padding: 20px;
   background-color: #FFDAC6;
   border-radius: 12px;
   color: #7C6A0A;
 }
+@media (max-width: 800px) {
+  section .healtcare .card-section .product, section .furniture .card-section .product {
+    width: 240px;
+    height: auto;
+  }
+}
 section .healtcare .card-section .product .heart-icon, section .furniture .card-section .product .heart-icon {
   width: auto;
   height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  justify-self: end;
   padding-right: 8px;
-  padding-bottom: 8px;
 }
 section .healtcare .card-section .product img, section .furniture .card-section .product img {
   width: 100%;
@@ -165,12 +192,21 @@ section .healtcare .card-section .product img, section .furniture .card-section 
   -o-object-fit: fill;
      object-fit: fill;
 }
+@media (max-width: 800px) {
+  section .healtcare .card-section .product img, section .furniture .card-section .product img {
+    width: 200px;
+    height: 230px;
+  }
+}
 section .healtcare .card-section .product h3, section .furniture .card-section .product h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 section .healtcare .card-section .product p, section .furniture .card-section .product p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   text-align: justify;
+}
+section .healtcare .card-section::-webkit-scrollbar, section .furniture .card-section::-webkit-scrollbar {
+  display: none;
 }
 section .furniture .card-section .product {
   background-color: #BABD8D;

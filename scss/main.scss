@@ -5,7 +5,7 @@ $primary-text-color: #7C6A0A;
 $extra-color: #FA9500;
 
 $font-stack: "IBM Plex Sans", serif;
-$paragraph: 1.3rem;
+$paragraph: 1.2rem;
 
 @mixin flexCenter ($direction, $justify, $align){
     display: flex;
@@ -142,7 +142,11 @@ article{
 section{
     width: auto;
     height: auto;
-    padding: 60px 55px 0;
+    padding: 60px 80px 0;
+
+    @media (max-width: 720px) {
+        padding: 60px 35px 0;
+    }
 
     h2{
         color: $primary-text-color;
@@ -159,27 +163,52 @@ section{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
+            justify-items: center;
             column-gap: 85px;
-            row-gap: 40px;
+            row-gap: 50px;
 
             margin: 40px 0 80px 0;
 
-            .product{
-                width: auto;
+            @media (max-width: 950px) {
+                column-gap: 45px;
+                row-gap: 50px;
+
+            }
+
+            @media (max-width: 800px) {
+                width: 100%;
                 height: auto;
-                padding: 20px 20px;
+                display: flex;
+
+                overflow: hidden;
+                overflow-x: auto;
+                overscroll-behavior-x: contain;
+                scroll-snap-type: x proximity;
+
+            }
+
+            .product{
+                width: 80%;
+                height: auto;
+                display: grid;
+                padding: 20px;
 
                 background-color: $secondary-color;
                 border-radius: 12px;
 
                 color: $primary-text-color;
 
+                @media (max-width: 800px) {
+                    width: 240px;
+                    height: auto;
+                }
+    
+
                 .heart-icon{
                     width: auto;
                     height: auto;
-                    @include flexCenter(row, flex-end,center);
+                    justify-self: end;
                     padding-right: 8px;
-                    padding-bottom: 8px;
                 }
 
                 img{
@@ -188,15 +217,23 @@ section{
                     margin-top: 10px;
                     border-radius: 12px;
                     object-fit: fill;
+
+                    @media (max-width: 800px) {
+                        width:200px;
+                        height: 230px;
+                    }
                 }
                 h3{
-                    font-size: 1.2rem;
+                    font-size: 1.3rem;
                 }
                 p{
                     font-size: $paragraph;
                     text-align: justify;
                 }
             }
+        }
+        .card-section::-webkit-scrollbar{
+            display: none;
         }
     }
 
