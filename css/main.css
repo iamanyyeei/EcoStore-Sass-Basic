@@ -16,14 +16,14 @@ nav {
 }
 nav p {
   font-size: 1.3rem;
-  padding-left: 55px;
+  padding-left: 80px;
   font-weight: 500;
   color: #7C6A0A;
 }
 nav .icons {
   display: flex;
   gap: 10px;
-  padding-right: 55px;
+  padding-right: 80px;
 }
 nav .icons button {
   background: none;
@@ -37,20 +37,21 @@ nav .icons__main {
     padding-left: 35px;
   }
   nav .icons {
-    padding-right: 35px;
+    padding-right: 26px;
   }
   nav .icons__profile, nav .icons__wishlist, nav .icons__cart {
     display: none;
   }
   nav .icons__main {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
 article {
   width: auto;
   height: auto;
-  padding: 20px 55px;
+  padding: 20px 80px;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   color: #7C6A0A;
@@ -104,7 +105,10 @@ article .image-section img {
   article .impact-section {
     grid-row: 2;
     margin-top: 20px;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
   article button {
     margin-top: 25px;
@@ -141,8 +145,6 @@ section .healtcare .card-section .product, section .furniture .card-section .pro
   padding: 20px 20px;
   background-color: #FFDAC6;
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
   color: #7C6A0A;
 }
 section .healtcare .card-section .product .heart-icon, section .furniture .card-section .product .heart-icon {
@@ -151,7 +153,7 @@ section .healtcare .card-section .product .heart-icon, section .furniture .card-
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  align-items: justify;
+  align-items: center;
   padding-right: 8px;
   padding-bottom: 8px;
 }

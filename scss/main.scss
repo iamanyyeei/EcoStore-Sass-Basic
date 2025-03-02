@@ -25,11 +25,11 @@ body{
 nav{
     width: 100vw;
     height: 100px;
-    @include flexCenter(row, space-between, center);
+    @include flexCenter(row,space-between,center);
 
     p{
         font-size: $paragraph;
-        padding-left: 55px;
+        padding-left: 80px;
         font-weight: 500;
         color: $primary-text-color;
     }
@@ -37,7 +37,7 @@ nav{
     .icons{
         display: flex;
         gap: 10px;
-        padding-right: 55px;
+        padding-right: 80px;
 
         button{
             background: none;
@@ -54,13 +54,14 @@ nav{
             padding-left: 35px;
         }
         .icons{
-            padding-right: 35px;
+            padding-right: 26px;
         }
         .icons__profile, .icons__wishlist, .icons__cart{
             display: none;
         }
         .icons__main{
-            display: block;
+            display: flex;
+            justify-content: flex-end;
         }
     }
 }
@@ -68,7 +69,7 @@ nav{
 article{
     width: auto;
     height: auto;
-    padding: 20px 55px;
+    padding: 20px 80px;
 
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -171,14 +172,12 @@ section{
                 background-color: $secondary-color;
                 border-radius: 12px;
 
-                @include flexCenter(column);
-
                 color: $primary-text-color;
 
                 .heart-icon{
                     width: auto;
                     height: auto;
-                    @include flexCenter(row, flex-end);
+                    @include flexCenter(row, flex-end,center);
                     padding-right: 8px;
                     padding-bottom: 8px;
                 }
