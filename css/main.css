@@ -6,43 +6,45 @@ body {
   font-size: 62.5%;
 }
 
-nav {
+/*** Aplicando BEM al navbar ***/
+.navbar {
   width: 100vw;
   height: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  /*** Pantallas menores a 650px ***/
 }
-nav p {
+.navbar .navbar__paragraph {
   font-size: 1.2rem;
-  padding-left: 80px;
   font-weight: 500;
   color: #7C6A0A;
+  padding-left: 80px;
 }
-nav .icons {
+.navbar .icons {
   display: flex;
   gap: 10px;
   padding-right: 80px;
 }
-nav .icons button {
+.navbar .icons .button--styles {
   background: none;
   border-style: none;
 }
-nav .icons__main {
+.navbar .icons__main--inactive {
   display: none;
 }
 @media (max-width: 650px) {
-  nav p {
+  .navbar .navbar__paragraph {
     padding-left: 35px;
   }
-  nav .icons {
+  .navbar .icons {
     padding-right: 26px;
   }
-  nav .icons__profile, nav .icons__wishlist, nav .icons__cart {
+  .navbar .icons__profile, .navbar .icons__wishlist, .navbar .icons__cart {
     display: none;
   }
-  nav .icons__main {
+  .navbar .icons__main--inactive {
     display: flex;
     justify-content: flex-end;
   }

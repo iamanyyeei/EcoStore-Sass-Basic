@@ -14,6 +14,12 @@ $paragraph: 1.2rem;
     align-items: $align;
 }
 
+@mixin paragraph ($font-size, $font-weight, $color){
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -22,16 +28,15 @@ body{
     font-size: 62.5%;
 }
 
-nav{
+/*** Aplicando BEM al navbar ***/
+.navbar{
     width: 100vw;
     height: 100px;
     @include flexCenter(row,space-between,center);
 
-    p{
-        font-size: $paragraph;
+    .navbar__paragraph{
+        @include paragraph($paragraph, 500, $primary-text-color);
         padding-left: 80px;
-        font-weight: 500;
-        color: $primary-text-color;
     }
 
     .icons{
@@ -39,18 +44,19 @@ nav{
         gap: 10px;
         padding-right: 80px;
 
-        button{
+        .button--styles{
             background: none;
             border-style: none;
         }
     }
 
-    .icons__main{
+    .icons__main--inactive{
         display: none;
     }
 
+    /*** Pantallas menores a 650px ***/
     @media (max-width: 650px) {
-        p{
+        .navbar__paragraph{
             padding-left: 35px;
         }
         .icons{
@@ -59,7 +65,7 @@ nav{
         .icons__profile, .icons__wishlist, .icons__cart{
             display: none;
         }
-        .icons__main{
+        .icons__main--inactive{
             display: flex;
             justify-content: flex-end;
         }
