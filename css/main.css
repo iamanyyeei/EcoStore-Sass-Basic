@@ -1,12 +1,34 @@
+/*** VALORES PREDETERMINADOS ***/
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #FFEFE7;
   font-family: "IBM Plex Sans", serif;
-  font-size: 62.5%;
 }
 
-/*** Aplicando BEM al navbar ***/
+.paragraph {
+  font-size: 2rem;
+  color: #7C6A0A;
+}
+
+.primary-tittle {
+  font-size: 3rem;
+}
+
+.tertiary-tittle {
+  font-size: 2rem;
+}
+
+.orange {
+  background-color: #FA9500;
+  color: white;
+}
+
+/*** Aplicando BEM al NAVBAR ***/
 .navbar {
   width: 100vw;
   height: 100px;
@@ -14,12 +36,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /*** Pantallas menores a 650px ***/
+  /*** Pantallas MENORES a 650px ***/
 }
-.navbar .navbar__paragraph {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #7C6A0A;
+.navbar .paragraph {
   padding-left: 80px;
 }
 .navbar .icons {
@@ -35,7 +54,7 @@ body {
   display: none;
 }
 @media (max-width: 650px) {
-  .navbar .navbar__paragraph {
+  .navbar .paragraph {
     padding-left: 35px;
   }
   .navbar .icons {
@@ -50,38 +69,34 @@ body {
   }
 }
 
+/*** Aplicando BEM al ARTICLE = Impact ***/
 .impact {
   width: auto;
   height: auto;
-  padding: 20px 80px;
   display: grid;
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 80px;
   color: #7C6A0A;
+  /*** Pantallas MENORES a 650px ***/
 }
-.impact h1 {
-  font-size: 2rem;
-}
-.impact p {
-  font-size: 1.2rem;
+.impact .paragraph {
   text-align: justify;
 }
-.impact button {
+.impact .impact__button {
   margin-top: 35px;
   padding: 12px 30px;
   border-style: none;
   border-radius: 20px;
-  background-color: #FA9500;
-  color: #FFEFE7;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 600;
 }
-.impact .image-section {
+.impact .impact__image {
   width: 100%;
   height: 450px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
-.impact .image-section img {
+.impact .impact__image--styles {
   width: 75%;
   height: auto;
   justify-self: end;
@@ -91,17 +106,16 @@ body {
 }
 @media (max-width: 650px) {
   .impact {
-    width: auto;
     padding: 0 35px;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2fr, 1fr);
     grid-template-columns: auto;
   }
-  .impact .image-section {
+  .impact .impact__image {
     grid-row: 1;
     justify-content: center;
   }
-  .impact .image-section img {
+  .impact .impact__image--styles {
     width: 100%;
   }
   .impact .impact__section {
@@ -109,10 +123,8 @@ body {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
   }
-  .impact button {
+  .impact .impact__button {
     margin-top: 25px;
   }
 }
@@ -129,15 +141,16 @@ section {
 }
 section h2 {
   color: #7C6A0A;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 400;
-  padding-bottom: 20px;
+  padding-bottom: 24px;
 }
-section .healtcare, section .furniture {
+
+.healtcare, .furniture {
   width: auto;
   height: auto;
 }
-section .healtcare .card-section, section .furniture .card-section {
+.healtcare .card__section, .furniture .card__section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
@@ -148,14 +161,14 @@ section .healtcare .card-section, section .furniture .card-section {
   margin: 40px 0 80px 0;
 }
 @media (max-width: 950px) {
-  section .healtcare .card-section, section .furniture .card-section {
+  .healtcare .card__section, .furniture .card__section {
     -moz-column-gap: 45px;
          column-gap: 45px;
     row-gap: 50px;
   }
 }
 @media (max-width: 800px) {
-  section .healtcare .card-section, section .furniture .card-section {
+  .healtcare .card__section, .furniture .card__section {
     width: 100%;
     height: auto;
     display: flex;
@@ -165,7 +178,7 @@ section .healtcare .card-section, section .furniture .card-section {
     scroll-snap-type: x proximity;
   }
 }
-section .healtcare .card-section .product, section .furniture .card-section .product {
+.healtcare .card__section .product, .furniture .card__section .product {
   width: 80%;
   height: auto;
   display: grid;
@@ -175,18 +188,18 @@ section .healtcare .card-section .product, section .furniture .card-section .pro
   color: #7C6A0A;
 }
 @media (max-width: 800px) {
-  section .healtcare .card-section .product, section .furniture .card-section .product {
+  .healtcare .card__section .product, .furniture .card__section .product {
     width: 240px;
     height: auto;
   }
 }
-section .healtcare .card-section .product .heart-icon, section .furniture .card-section .product .heart-icon {
+.healtcare .card__section .product .product__icon, .furniture .card__section .product .product__icon {
   width: auto;
   height: auto;
   justify-self: end;
   padding-right: 8px;
 }
-section .healtcare .card-section .product img, section .furniture .card-section .product img {
+.healtcare .card__section .product .product__image, .furniture .card__section .product .product__image {
   width: 100%;
   height: 280px;
   margin-top: 10px;
@@ -195,22 +208,23 @@ section .healtcare .card-section .product img, section .furniture .card-section 
      object-fit: fill;
 }
 @media (max-width: 800px) {
-  section .healtcare .card-section .product img, section .furniture .card-section .product img {
+  .healtcare .card__section .product .product__image, .furniture .card__section .product .product__image {
     width: 200px;
     height: 230px;
   }
 }
-section .healtcare .card-section .product h3, section .furniture .card-section .product h3 {
-  font-size: 1.3rem;
-}
-section .healtcare .card-section .product p, section .furniture .card-section .product p {
-  font-size: 1.2rem;
+.healtcare .card__section .product .paragraph, .furniture .card__section .product .paragraph {
   text-align: justify;
 }
-section .healtcare .card-section::-webkit-scrollbar, section .furniture .card-section::-webkit-scrollbar {
+.healtcare .card__section::-webkit-scrollbar, .furniture .card__section::-webkit-scrollbar {
   display: none;
 }
-section .furniture .card-section .product {
+
+.furniture .card__section .product {
   background-color: #BABD8D;
-  color: aliceblue;
+  color: white;
+}
+.furniture .card__section .paragraph {
+  font-size: 2rem;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

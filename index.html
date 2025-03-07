@@ -14,7 +14,7 @@
 <body>
     <!--NAVRVAR | BEM Aplicado-->
     <nav class="navbar">
-        <p class="navbar__paragraph">EcoStore</p>
+        <p class="paragraph">EcoStore</p>
         <div class="icons">
             <button class="icons__profile button--styles">
                 <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512"><path fill="#7C6A0A" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"/></svg>
@@ -34,174 +34,178 @@
         <!--ARTICLE | BEM Aplicado-->
         <article class="impact">
             <div class="impact__section">
-                <h1>Impacto Ecológico</h1>
-                <p>Debido al impacto ambiental siendo las acciones humanas las que  modifican el ambiente, Eco-store se compromete a elaborar sus productos de manera artesanal y con materiales que favorecen al cuidado del medio ambiente.</p>
-                <button>Conoce más</button>
+                <h1 class="primary-tittle">Impacto Ecológico</h1>
+                <p class="paragraph">Debido al impacto ambiental siendo las acciones humanas las que  modifican el ambiente, Eco-store se compromete a elaborar sus productos de manera artesanal y con materiales que favorecen al cuidado del medio ambiente.</p>
+                <button class="impact__button orange">Conoce más</button>
             </div>
-            <div class="image-section">
-                <img src="./css/assets/img/main.jpg" alt="">
+            <div class="impact__image">
+                <img class="impact__image--styles" src="./css/assets/img/main.jpg" alt="Imagen principal: Vasito con cepillo de bambú y jabones aromáticos">
             </div>
         </article>
 
         <section>
             <div class="healtcare">
                 <h2>Cuidado de la salud</h2>
-                <div class="card-section">
+
+                <div class="card__section">
+
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#7C6A0A" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/products/toothbrush.jpg" alt="Cepillo de Bambú">
-                        <h3>Cepillo de Bambú</h3>
-                        <p>Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                        <img class="product__image" src="./css/assets/img/products/toothbrush.jpg" alt="Cepillo de Bambú">
+                        <h3 class="tertiary-tittle">Cepillo de Bambú</h3>
+                        <p class="paragraph">Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                    </div>
+
+                    <div class="product">
+                        <div class="product__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
+                                <path fill="#7C6A0A" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
+                            </svg>
+                        </div>
+                        <img class="product__image" src="./css/assets/img/products/hand-cream.jpeg" alt="Crema para manos">
+                        <h3 class="tertiary-tittle">Crema para manos</h3>
+                        <p class="paragraph">Crema hidratante con eucalipto que ayuda al cuidado de la piel.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#7C6A0A" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/products/hand-cream.jpeg" alt="Crema para manos">
-                        <h3>Crema para manos</h3>
-                        <p>Crema hidratante con eucalipto que ayuda al cuidado de la piel.</p>
+                        <img class="product__image" src="./css/assets/img/products/serum.jpg" alt="Serum">
+                        <h3 class="tertiary-tittle">Serúm hidratante</h3>
+                        <p class="paragraph">Serúm hecho a base de extractos naturales y ácido hialurónico.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#7C6A0A" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/products/serum.jpg" alt="Serum">
-                        <h3>Serúm hidratante</h3>
-                        <p>Serúm hecho a base de extractos naturales y ácido hialurónico.</p>
+                        <img class="product__image" src="./css/assets/img/products/organic-kit.jpg" alt="Serum">
+                        <h3 class="tertiary-tittle">Kit de viaje</h3>
+                        <p class="paragraph">Incluye peine y cepillo de bambú, jabón orgánico de eucalipto y shampoo tamaño viaje.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#7C6A0A" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/products/organic-kit.jpg" alt="Serum">
-                        <h3>Kit de viaje</h3>
-                        <p>Incluye peine y cepillo de bambú, jabón orgánico de eucalipto y shampoo tamaño viaje.</p>
+                        <img class="product__image" src="./css/assets/img/products/organic-soap.jpg" alt="Set de jabones">
+                        <h3 class="tertiary-tittle">Set de jabones</h3>
+                        <p class="paragraph">Paquete de 2 unidades de jabón de carbón activado con coco.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#7C6A0A" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/products/organic-soap.jpg" alt="Set de jabones">
-                        <h3>Set de jabones</h3>
-                        <p>Paquete de 2 unidades de jabón de carbón activado con coco.</p>
-                    </div>
-                    <div class="product">
-                        <div class="heart-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
-                                <path fill="#7C6A0A" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
-                            </svg>
-                        </div>
-                        <img src="./css/assets/img/products/guasha-kit.jpg" alt="Kit de skincare">
-                        <h3>Kit de skincare</h3>
-                        <p>Incluye 2 rodillos y una gua sha.</p>
+                        <img class="product__image" src="./css/assets/img/products/guasha-kit.jpg" alt="Kit de skincare">
+                        <h3 class="tertiary-tittle">Kit de skincare</h3>
+                        <p class="paragraph">Incluye 2 rodillos y una gua sha.</p>
                     </div>
                 </div>
             </div>
+
             <div class="furniture">
                 <h2>Decoración del hogar</h2>
-                <div class="card-section">
+                <div class="card__section">
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#FFFF" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/furniture/wood-chair.jpg" alt="Silla de Bambú">
-                        <h3>Silla de Bambú</h3>
-                        <p>Disponible en 2 colores: blanco y negro, acabado de bambú.</p>
+                        <img class="product__image" src="./css/assets/img/furniture/wood-chair.jpg" alt="Silla de Bambú">
+                        <h3 class="tertiary-tittle">Silla de Bambú</h3>
+                        <p class="paragraph">Disponible en 2 colores: blanco y negro, acabado de bambú.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#FFFF" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/furniture/small-table.jpeg" alt="Banco pequeño">
-                        <h3>Banco pequeño</h3>
-                        <p>Ideal para agregar un toque de estilo a tus espacios.</p>
+                        <img class="product__image" src="./css/assets/img/furniture/small-table.jpeg" alt="Banco pequeño">
+                        <h3 class="tertiary-tittle">Banco pequeño</h3>
+                        <p class="paragraph">Ideal para agregar un toque de estilo a tus espacios.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#FFFF" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/furniture/stand-table.jpg" alt="Buró">
-                        <h3>Buró</h3>
-                        <p>Elaborado con bambú, cuenta con 2 compartimientos para guardar cosas.</p>
+                        <img class="product__image" src="./css/assets/img/furniture/stand-table.jpg" alt="Buró">
+                        <h3 class="tertiary-tittle">Buró</h3>
+                        <p class="paragraph">Elaborado con bambú, cuenta con 2 compartimientos para guardar cosas.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#FFFF" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/furniture/mueble.jpg" alt="Cajonera">
-                        <h3>Cajonera</h3>
-                        <p>Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                        <img class="product__image" src="./css/assets/img/furniture/mueble.jpg" alt="Cajonera">
+                        <h3 class="tertiary-tittle">Cajonera</h3>
+                        <p class="paragraph">Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#FFFF" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/furniture/mirror.jpg" alt="Espejo de pared">
-                        <h3>Espejo de pared</h3>
-                        <p>Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                        <img class="product__image" src="./css/assets/img/furniture/mirror.jpg" alt="Espejo de pared">
+                        <h3 class="tertiary-tittle">Espejo de pared</h3>
+                        <p class="paragraph">Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
                     </div>
                     
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#FFFF" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/furniture/desk-lamp.jpg" alt="Lámpara de bambú">
-                        <h3>Lámpara de bambú</h3>
-                        <p>Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                        <img class="product__image" src="./css/assets/img/furniture/desk-lamp.jpg" alt="Lámpara de bambú">
+                        <h3 class="tertiary-tittle">Lámpara de bambú</h3>
+                        <p class="paragraph">Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#FFFF" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/furniture/stand.jpg" alt="Mesita decorativa">
-                        <h3>Mesita decorativa</h3>
-                        <p>Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                        <img class="product__image" src="./css/assets/img/furniture/stand.jpg" alt="Mesita decorativa">
+                        <h3 class="tertiary-tittle">Mesita decorativa</h3>
+                        <p class="paragraph">Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#FFFF" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/furniture/mirror.jpg" alt="Mesa de desayuno">
-                        <h3>Mesa de desayuno</h3>
-                        <p>Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                        <img class="product__image" src="./css/assets/img/furniture/mirror.jpg" alt="Mesa de desayuno">
+                        <h3 class="tertiary-tittle">Mesa de desayuno</h3>
+                        <p class="paragraph">Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
                     </div>
                     <div class="product">
-                        <div class="heart-icon">
+                        <div class="product__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512">
                                 <path fill="#FFFF" d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/>
                             </svg>
                         </div>
-                        <img src="./css/assets/img/furniture/table.jpg" alt="Mesa decorativa">
-                        <h3>Mesa decorativa</h3>
-                        <p>Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
+                        <img class="product__image" src="./css/assets/img/furniture/table.jpg" alt="Mesa decorativa">
+                        <h3 class="tertiary-tittle">Mesa decorativa</h3>
+                        <p class="paragraph">Paquete de 2 unidades hecho 100% de materiales ecológicos.</p>
                     </div>
                  </div>
             </div>
@@ -212,11 +216,11 @@
                 <h2>¿Por qué nosotros?</h2>
                 <div class="earth">
                     <img src="/css/assets/img/earth.png" alt="">
-                    <p></p>
+                    <p class="paragraph"></p>
                 </div>
                 <div class="innovation">
                     <img src="/css/assets/img/ecology.png" alt="">
-                    <p></p>
+                    <p class="paragraph"></p>
                 </div>
            </div>
            <div class="galery">
@@ -236,17 +240,17 @@
                 <div class="mapa">
                     <img src="" alt="">
                 </div>
-                <p></p>
+                <p class="paragraph"></p>
            </div>
         </section>
     </main>
 
     <footer>
-        <h3>EcoStore</h3>
-        <p>Careers</p>
-        <p>Careers</p>
-        <p>Careers</p>
-        <p>Careers</p>
+        <h3 class="tertiary-tittle">EcoStore</h3>
+        <p class="paragraph">Careers</p>
+        <p class="paragraph">Careers</p>
+        <p class="paragraph">Careers</p>
+        <p >Careers</p>
         <div class="social-media">
             <img src="" alt="">
             <img src="" alt="">
