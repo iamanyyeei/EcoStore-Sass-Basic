@@ -20,6 +20,11 @@ $paragraph: 1.2rem;
     color: $color;
 }
 
+@mixin dimentions ($width, $height){
+    width: $width;
+    height: $height;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -30,8 +35,7 @@ body{
 
 /*** Aplicando BEM al navbar ***/
 .navbar{
-    width: 100vw;
-    height: 100px;
+    @include dimentions(100vw, 100px);
     @include flexCenter(row,space-between,center);
 
     .navbar__paragraph{
@@ -72,9 +76,8 @@ body{
     }
 }
 
-article{
-    width: auto;
-    height: auto;
+.impact{
+    @include dimentions(auto, auto);
     padding: 20px 80px;
 
     display: grid;
@@ -103,15 +106,13 @@ article{
     }
 
     .image-section{
-        width: 100%;
-        height: 450px;
+        @include dimentions(100%, 450px);
         display: flex;
         justify-content: end;
     }
 
     .image-section img{
-        width: 75%;
-        height: auto;
+        @include dimentions(75%, auto);
 
         justify-self: end;
 
@@ -134,7 +135,7 @@ article{
             width: 100%;
         }
 
-        .impact-section{
+        .impact__section{
             grid-row: 2;
             margin-top: 20px;
             @include flexCenter(column, space-between, center);
@@ -146,8 +147,7 @@ article{
 }
 
 section{
-    width: auto;
-    height: auto;
+    @include dimentions(auto, auto);
     padding: 60px 80px 0;
 
     @media (max-width: 720px) {
@@ -162,8 +162,7 @@ section{
     }
 
     .healtcare{
-        width: auto;
-        height: auto;
+        @include dimentions(auto, auto);
 
         .card-section{
             display: grid;
@@ -182,8 +181,7 @@ section{
             }
 
             @media (max-width: 800px) {
-                width: 100%;
-                height: auto;
+                @include dimentions(100%, auto);
                 display: flex;
 
                 overflow: hidden;
@@ -194,8 +192,7 @@ section{
             }
 
             .product{
-                width: 80%;
-                height: auto;
+                @include dimentions(80%, auto);
                 display: grid;
                 padding: 20px;
 
@@ -205,28 +202,24 @@ section{
                 color: $primary-text-color;
 
                 @media (max-width: 800px) {
-                    width: 240px;
-                    height: auto;
+                    @include dimentions(240px, auto);
                 }
     
 
                 .heart-icon{
-                    width: auto;
-                    height: auto;
+                    @include dimentions(auto, auto);
                     justify-self: end;
                     padding-right: 8px;
                 }
 
                 img{
-                    width: 100%;
-                    height: 280px;
+                    @include dimentions(100%, 280px);
                     margin-top: 10px;
                     border-radius: 12px;
                     object-fit: fill;
 
                     @media (max-width: 800px) {
-                        width:200px;
-                        height: 230px;
+                        @include dimentions(200px, 230px);
                     }
                 }
                 h3{
