@@ -350,7 +350,6 @@ body{
 
 .gallery{
     @include autoDimensions(auto,auto);
-
     .gallery__container{
         width: 100%;
         height: auto;
@@ -388,4 +387,42 @@ body{
             }
         }
     }
+}
+
+.location{
+    @include autoDimensions(auto,auto);
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+
+    .location__map{
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .location__image{
+            width: 85%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 24px;
+            padding-bottom: 24px;
+            padding-top: 24px;
+        }
+    }
+    .tertiary-tittle, .paragraph{
+        @include paragraph($paragraph, $extra-color);
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 800px) {
+        .location__map{
+            .location__image{
+                width: 100%;
+            }
+        }
+    }
+
 }

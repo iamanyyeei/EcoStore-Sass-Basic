@@ -346,4 +346,38 @@ body {
   .gallery .gallery__container .gallery__image:hover {
     transform: scale(1.1);
   }
+}
+
+.location {
+  width: auto;
+  height: auto;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.location .location__map {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location .location__map .location__image {
+  width: 85%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 24px;
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
+.location .tertiary-tittle, .location .paragraph {
+  font-size: 2rem;
+  color: #FA9500;
+  margin-bottom: 0;
+}
+@media (max-width: 800px) {
+  .location .location__map .location__image {
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
