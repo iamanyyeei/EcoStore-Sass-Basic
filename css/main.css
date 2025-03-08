@@ -33,6 +33,9 @@ body {
   background-color: #FA9500;
   color: white;
 }
+.orange:hover {
+  transform: scale(1.1);
+}
 
 /*** Aplicando BEM al NAVBAR ***/
 .navbar {
@@ -56,6 +59,9 @@ body {
   background: none;
   border-style: none;
 }
+.navbar .icons__profile:hover, .navbar .icons__wishlist:hover, .navbar .icons__cart:hover {
+  transform: scale(1.2);
+}
 .navbar .icons__main--inactive {
   display: none;
 }
@@ -72,6 +78,9 @@ body {
   .navbar .icons__main--inactive {
     display: flex;
     justify-content: flex-end;
+  }
+  .navbar .icons__main--inactive:hover {
+    transform: scale(1.2);
   }
 }
 
@@ -158,7 +167,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  justify-items: center;
+  place-items: center;
   -moz-column-gap: 85px;
        column-gap: 85px;
   row-gap: 50px;
@@ -184,8 +193,9 @@ body {
 }
 .healtcare .card__section .product, .furniture .card__section .product {
   width: 80%;
-  height: auto;
+  height: 480px;
   display: grid;
+  grid-template-rows: min-content max-content min-content min-content;
   padding: 20px;
   background-color: #FFDAC6;
   border-radius: 12px;
@@ -202,6 +212,9 @@ body {
   height: auto;
   justify-self: end;
   padding-right: 8px;
+}
+.healtcare .card__section .product .product__icon:hover, .furniture .card__section .product .product__icon:hover {
+  transform: scale(1.1);
 }
 .healtcare .card__section .product .product__image, .furniture .card__section .product .product__image {
   width: 100%;
@@ -239,6 +252,11 @@ body {
 .information .secondary-tittle {
   font-weight: bold;
 }
+@media (max-width: 720px) {
+  .information {
+    padding: 0 35px;
+  }
+}
 
 .aboutUs {
   width: auto;
@@ -246,7 +264,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: auto;
-  margin: 50px 40px 80px;
+  padding: 50px 40px 80px;
 }
 .aboutUs .aboutUs__column {
   display: flex;
@@ -255,6 +273,12 @@ body {
 .aboutUs .aboutUs__column .aboutUs__image {
   width: auto;
   height: auto;
+}
+@media (max-width: 800px) {
+  .aboutUs .aboutUs__column .aboutUs__image {
+    width: 140px;
+    height: 140px;
+  }
 }
 .aboutUs .aboutUs__column .paragraph {
   font-size: 2rem;
@@ -268,4 +292,58 @@ body {
 }
 .aboutUs .aboutUs__column:first-child .paragraph {
   padding: 0 20px;
+}
+@media (max-width: 800px) {
+  .aboutUs {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-columns: auto;
+    row-gap: 30px;
+    padding: 50px 0 80px;
+  }
+}
+
+.gallery {
+  width: auto;
+  height: auto;
+}
+.gallery .gallery__container {
+  width: 100%;
+  height: auto;
+  padding: 50px 0 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  place-items: center;
+}
+.gallery .gallery__container .gallery__image {
+  width: 100%;
+  height: 300px;
+  border-radius: 24px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.gallery .gallery__container .gallery__image:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 720px) {
+  .gallery .gallery__container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: auto;
+    row-gap: 40px;
+  }
+  .gallery .gallery__container .gallery__image {
+    width: 70%;
+    height: 320px;
+    border-radius: 24px;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .gallery .gallery__container .gallery__image:hover {
+    transform: scale(1.1);
+  }
 }/*# sourceMappingURL=main.css.map */
