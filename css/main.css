@@ -194,8 +194,8 @@ body {
 .healtcare .card__section .product, .furniture .card__section .product {
   width: 80%;
   height: 480px;
-  display: grid;
-  grid-template-rows: min-content max-content min-content min-content;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   background-color: #FFDAC6;
   border-radius: 12px;
@@ -210,7 +210,8 @@ body {
 .healtcare .card__section .product .product__icon, .furniture .card__section .product .product__icon {
   width: auto;
   height: auto;
-  justify-self: end;
+  display: flex;
+  justify-content: flex-end;
   padding-right: 8px;
 }
 .healtcare .card__section .product .product__icon:hover, .furniture .card__section .product .product__icon:hover {
@@ -232,6 +233,13 @@ body {
 }
 .healtcare .card__section .product .paragraph, .furniture .card__section .product .paragraph {
   text-align: justify;
+}
+@media (max-width: 800px) {
+  .healtcare .card__section .product .paragraph, .furniture .card__section .product .paragraph {
+    height: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 .healtcare .card__section::-webkit-scrollbar, .furniture .card__section::-webkit-scrollbar {
   display: none;
@@ -337,7 +345,7 @@ body {
     row-gap: 40px;
   }
   .gallery .gallery__container .gallery__image {
-    width: 100%;
+    width: 70%;
     height: 320px;
     border-radius: 24px;
     -o-object-fit: fill;
@@ -405,12 +413,6 @@ footer .footer__socialmedia {
 footer .footer__socialmedia .footer__image {
   width: 35px;
   height: 35px;
-}
-@media (max-width: 800px) {
-  footer .footer__socialmedia .footer__image {
-    width: 25px;
-    height: 25px;
-  }
 }
 @media (max-width: 800px) {
   footer {
